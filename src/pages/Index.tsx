@@ -126,8 +126,8 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-2">
-              <Icon name="GraduationCap" size={32} className="text-primary" />
-              <span className="text-xl font-bold text-foreground">ЭкзаменЦентр</span>
+              <div className="text-2xl">🎆</div>
+              <span className="text-xl font-bold text-foreground" style={{fontFamily: 'Fredoka'}}>🌟 ЭкзаменЦентр</span>
             </div>
             <nav className="hidden md:flex space-x-8">
               <a href="#courses" className="text-foreground hover:text-primary transition-colors">Курсы</a>
@@ -169,46 +169,53 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-accent to-secondary">
+      <section className="relative bg-gradient-to-br from-accent via-secondary to-primary overflow-hidden">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Ccircle cx="7" cy="7" r="1"/%3E%3Ccircle cx="31" cy="7" r="2"/%3E%3Ccircle cx="7" cy="31" r="1"/%3E%3Ccircle cx="31" cy="31" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-50"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-accent-foreground">
-                Готовим к экзаменам с гарантией результата
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-accent-foreground" style={{fontFamily: 'Fredoka'}}>
+                🌟 Готовим к экзаменам весело и эффективно! 🚀
               </h1>
-              <p className="text-xl mb-8 text-accent-foreground/80">
-                ВПР, ОГЭ, ЕГЭ — качественная подготовка с опытными преподавателями. 
-                Средний балл наших учеников на 25% выше городского
+              <p className="text-xl mb-8 text-accent-foreground/90 font-medium">
+                🎓 ВПР, ОГЭ, ЕГЭ — увлекательная подготовка с опытными преподавателями! 
+                Средний балл наших учеников на 25% выше городского ⭐
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Dialog open={isBookingOpen} onOpenChange={setIsBookingOpen}>
                   <DialogTrigger asChild>
-                    <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
+                    <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1" style={{fontFamily: 'Fredoka'}}>
                       <Icon name="Calendar" className="mr-2" size={20} />
-                      Записаться на пробное занятие
+                      🎯 Записаться на пробное занятие
                     </Button>
                   </DialogTrigger>
                 </Dialog>
-                <Button size="lg" variant="outline" className="border-accent-foreground/20 text-accent-foreground hover:bg-white/10">
+                <Button size="lg" variant="outline" className="border-accent-foreground/20 text-accent-foreground hover:bg-white/10 backdrop-blur-sm" style={{fontFamily: 'Fredoka'}}>
                   <Icon name="Phone" className="mr-2" size={20} />
-                  Получить консультацию
+                  💬 Получить консультацию
                 </Button>
               </div>
             </div>
             <div className="relative">
-              <div className="w-full h-64 bg-white/20 rounded-lg shadow-2xl flex items-center justify-center">
-                <Icon name="BookOpen" size={80} className="text-accent-foreground/60" />
+              <div className="w-full h-64 bg-white/30 rounded-2xl shadow-2xl flex items-center justify-center border-4 border-white/20 backdrop-blur-sm">
+                <div className="text-center">
+                  <div className="text-6xl mb-2">📚</div>
+                  <div className="text-4xl">🎯</div>
+                </div>
               </div>
+              <div className="absolute -top-4 -right-4 text-4xl animate-bounce">⭐</div>
+              <div className="absolute -bottom-2 -left-2 text-3xl animate-pulse">🎈</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Courses Section */}
-      <section id="courses" className="py-16">
+      <section id="courses" className="py-16 relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-blue-50/50 to-purple-50/50"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-4">Наши курсы</h2>
+            <h2 className="text-3xl font-bold text-foreground mb-4" style={{fontFamily: 'Fredoka'}}>📚 Наши курсы</h2>
             <p className="text-xl text-foreground/70">Выберите подходящую программу подготовки</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -244,10 +251,12 @@ const Index = () => {
       </section>
 
       {/* Teachers Section */}
-      <section id="teachers" className="py-16 bg-white">
+      <section id="teachers" className="py-16 bg-gradient-to-r from-green-50 to-blue-50 relative">
+        <div className="absolute top-10 left-10 text-4xl animate-bounce">🌟</div>
+        <div className="absolute bottom-10 right-10 text-3xl animate-pulse">🌈</div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-4">Наши преподаватели</h2>
+            <h2 className="text-3xl font-bold text-foreground mb-4" style={{fontFamily: 'Fredoka'}}>👩‍🏫 Наши преподаватели</h2>
             <p className="text-xl text-foreground/70">Опытные педагоги с подтверденными результатами</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -287,10 +296,11 @@ const Index = () => {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-16 bg-secondary/20">
+      <section id="pricing" className="py-16 bg-gradient-to-br from-yellow-50 via-orange-50 to-pink-50 relative">
+        <div className="absolute top-5 right-5 text-3xl animate-spin" style={{animationDuration: '3s'}}>✨</div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-4">Стоимость обучения</h2>
+            <h2 className="text-3xl font-bold text-foreground mb-4" style={{fontFamily: 'Fredoka'}}>💰 Стоимость обучения</h2>
             <p className="text-xl text-foreground/70">Выберите подходящий тарифный план</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -328,10 +338,11 @@ const Index = () => {
       </section>
 
       {/* Reviews Section */}
-      <section id="reviews" className="py-16 bg-white">
+      <section id="reviews" className="py-16 bg-gradient-to-l from-pink-50 to-purple-50 relative">
+        <div className="absolute top-8 left-8 text-4xl animate-bounce" style={{animationDelay: '0.5s'}}>🎉</div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-4">Отзывы учеников</h2>
+            <h2 className="text-3xl font-bold text-foreground mb-4" style={{fontFamily: 'Fredoka'}}>😊 Отзывы учеников</h2>
             <p className="text-xl text-foreground/70">Что говорят о нас наши студенты</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -360,7 +371,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-3xl font-bold mb-6 text-accent-foreground">Свяжитесь с нами</h2>
+              <h2 className="text-3xl font-bold mb-6 text-accent-foreground" style={{fontFamily: 'Fredoka'}}>📩 Свяжитесь с нами</h2>
               <div className="space-y-4">
                 <div className="flex items-center">
                   <Icon name="MapPin" size={20} className="mr-3 text-primary" />
@@ -381,7 +392,7 @@ const Index = () => {
               </div>
             </div>
             <div>
-              <h3 className="text-xl font-bold mb-4 text-accent-foreground">Оставьте заявку</h3>
+              <h3 className="text-xl font-bold mb-4 text-accent-foreground" style={{fontFamily: 'Fredoka'}}>✍️ Оставьте заявку</h3>
               <div className="space-y-4">
                 <Input placeholder="Ваше имя" className="bg-white/90 border-border text-foreground" />
                 <Input placeholder="Телефон" className="bg-white/90 border-border text-foreground" />
